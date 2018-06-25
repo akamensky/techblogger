@@ -10,4 +10,4 @@ services:
       WORDPRESS_DB_USER: wordpress
       WORDPRESS_DB_PASSWORD: wordpress
     volumes:
-      - ./src/techblogger:/var/www/html/wp-content/themes/techblogger
+      - .:/var/www/html/wp-content/themes/techblogger

@@ -29,3 +29,13 @@ if ( function_exists('register_sidebar') )
         'after_title' => '</h4>',
     )
 );
+
+add_action('admin_menu', 'techblogger_settings_menu');
+
+function techblogger_settings_menu() {
+	add_theme_page("Tech Blogger theme settings", "Tech Blogger", 'edit_theme_options', 'techblogger-settings', 'techblogger_settings_page');
+}
+
+function techblogger_settings_page() {
+?> Test <?php
+}
