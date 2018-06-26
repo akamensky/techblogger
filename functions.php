@@ -36,6 +36,26 @@ function techblogger_settings_menu() {
 	add_theme_page("Tech Blogger theme settings", "Tech Blogger", 'edit_theme_options', 'techblogger-settings', 'techblogger_settings_page');
 }
 
-function techblogger_settings_page() {
-?> Test <?php
+function techblogger_settings_page() { ?>
+	<div class="wrap">
+		<h1>Theme Settings</h1>
+		<form method="post" action="" name="check-update">
+            <input type="hidden" id="update-theme" name="update-theme" value="1">
+			<input class="button" type="submit" value="Update Theme">
+            <?php if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST) && isset($_POST['update-theme']) && $_POST['update-theme'] == 1) {
+                print("<p>Updating:</p>");
+                $_oldcwd = getcwd();
+                chdir(get_template_directory());
+                $output = shell_exec('git pull origin master');
+                chdir($_oldcwd);
+                print("<pre>");
+                print($output);
+                print("</pre>");
+            } ?>
+		</form>
+	</div>
+<?php }
+
+function techblogger_settings_page_setup() {
+	add_settings_section('section', 'Updates', 'theme_settings_updates', 'theme-options');
 }
