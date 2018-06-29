@@ -13,7 +13,7 @@
 }
 
 .h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     font-weight: 400;
 }
 
@@ -72,12 +72,11 @@ ul.pager {
 }
 
 .content-meta {
-    display: block;
+    display: inline-block;
     font-size: 0.8rem;
     margin-top: -1rem;
     margin-bottom: 1rem;
-    font-weight: 600;
-    color: gray;
+    color: #afafaf;
 }
 
 .content p {
