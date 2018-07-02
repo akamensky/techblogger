@@ -10,8 +10,6 @@
                             'short_ping'  => true,
                             'avatar_size' => 50,
                         ) );
-                        $_comments = get_comments();
-                        print_r($_comments);
                     ?>
                 </ul>
                 <?php else: ?>
