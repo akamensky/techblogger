@@ -1,6 +1,7 @@
 </div>
 <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-<script>
+<script type="application/javascript">
+    /* <![CDATA[ */
     (function(document) {
         var toggle = document.querySelector('.sidebar-toggle');
         var sidebar = document.querySelector('#sidebar');
@@ -13,6 +14,7 @@
             checkbox.checked = false;
         }, false);
     })(document);
+    /* ]]> */
 </script>
 <!-- CSS -->
 <!--<link rel="stylesheet" href="/wp-content/themes/techblogger/assets/css/poole.css">-->
