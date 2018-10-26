@@ -1,6 +1,6 @@
 <?php
 /**
- * Enqueue styles in footer instead of head
+ * Enqueue styles and scripts in footer instead of head
  */
 function theme_styles() {
     wp_enqueue_style('poole', get_template_directory_uri().'/assets/css/poole.css');
@@ -8,6 +8,7 @@ function theme_styles() {
     wp_enqueue_style('lanyon', get_template_directory_uri().'/assets/css/lanyon.css');
     wp_register_style('OpenSans', 'https://fonts.googleapis.com/css?family=Open+Sans:300i,400|PT+Sans|Roboto+Mono');
     wp_enqueue_style('OpenSans');
+    wp_enqueue_script('sidebar', get_template_directory_uri().'/assets/js/sidebar.js', array(), null, true);
 }
 add_action('wp_enqueue_scripts', 'theme_styles');
 
