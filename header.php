@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <?php wp_head(); ?>
 </head>
-<body class="theme-base-08">
+<body class="theme-base-0d">
     <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
     <div class="sidebar" id="sidebar">
         <div class="sidebar-item">
