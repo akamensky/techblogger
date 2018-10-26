@@ -35,8 +35,8 @@
         <div class="masthead">
             <div class="container">
                 <h3 class="masthead-title">
-                    <a href="/" title="Home">Alexey's blog</a>
-                    <small>It's not a bug, it's a feature.</small>
+                    <a href="/" title="Home"><?php echo get_bloginfo( 'name' ); ?></a>
+                    <small><?php echo get_bloginfo( 'description' ); ?></small>
                 </h3>
             </div>
         </div>
