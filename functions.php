@@ -1,17 +1,5 @@
 <?php
 /**
- * Enqueue styles and scripts in footer instead of head
- */
-function theme_styles() {
-    wp_enqueue_style('poole', get_template_directory_uri().'/assets/css/poole.css');
-    wp_enqueue_style('syntax', get_template_directory_uri().'/assets/css/syntax.css');
-    wp_enqueue_style('lanyon', get_template_directory_uri().'/assets/css/lanyon.css');
-    wp_register_style('OpenSans', 'https://fonts.googleapis.com/css?family=Open+Sans:300i,400|PT+Sans|Roboto+Mono');
-    wp_enqueue_style('OpenSans');
-}
-add_action('wp_enqueue_scripts', 'theme_styles');
-
-/**
  * Add classes to navigation links
  */
 function techblogger_previous_link_attributes() {
