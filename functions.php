@@ -1,5 +1,13 @@
 <?php
 /**
+ * Make excerpt ellipses prettier
+ */
+function new_excerpt_more($more) {
+    return '... <a class="read-more" href="' . get_permalink( get_the_ID() ) . '">Continue reading</a>';
+}
+add_filter('excerpt_more', 'new_excerpt_more');
+
+/**
  * Add classes to navigation links
  */
 function techblogger_previous_link_attributes() {
