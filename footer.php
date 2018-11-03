@@ -15,6 +15,7 @@
     })(document);
 </script>
 <!-- CSS -->
+<link rel="stylesheet" href="/wp-content/themes/techblogger/assets/css/techblogger.css">
 <link rel="stylesheet" href="/wp-content/themes/techblogger/assets/css/poole.css">
 <link rel="stylesheet" href="/wp-content/themes/techblogger/assets/css/syntax.css">
 <link rel="stylesheet" href="/wp-content/themes/techblogger/assets/css/lanyon.css">

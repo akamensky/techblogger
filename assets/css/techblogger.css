@@ -1,0 +1,35 @@
+.comment-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.comment-list li {
+    margin-bottom: 1rem;
+}
+
+.comment-list article {
+    background-color: #f5f2f0;
+    padding: 1rem;
+}
+
+.comment-list header {
+    font-size: medium;
+    font-style: italic;
+    margin-bottom: 1rem;
+}
+
+form#commentform textarea,input {
+    display: block;
+    width: 100%;
+    border: 1px solid rgb(206, 212, 218);
+    border-radius: 4px;
+    color: rgb(73, 80, 87);
+    margin: 1rem 0;
+    padding: 6px 12px;
+    font-size: 1rem;
+}
+
+textarea#comment {
+    height: 5rem;
+}

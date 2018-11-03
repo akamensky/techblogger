@@ -165,3 +165,43 @@ function techblogger_settings_page() { ?>
 function techblogger_settings_page_setup() {
 	add_settings_section('section', 'Updates', 'theme_settings_updates', 'theme-options');
 }
+
+function better_comments($comment, $args, $depth) {
+    global $post;
+    $author_id = $post->post_author;
+    $GLOBALS['comment'] = $comment;
+    switch ($comment->comment_type):
+        case 'pingback':
+        case 'trackback':
+            // Display trackbacks differently than normal comments. ?>
+            <li id="comment-<?php comment_ID(); ?>" <?php comment_class(); ?>>
+            <div class="pingback-entry"><span class="pingback-heading"><?php esc_html_e( 'Pingback:', 'twenties' ); ?></span> <?php comment_author_link(); ?></div>
+            <?php
+            break;
+        default :
+            // Proceed with normal comments. ?>
+        <li id="li-comment-<?php comment_ID(); ?>">
+            <article id="comment-<?php comment_ID(); ?>" <?php comment_class('clr'); ?>>
+                <div class="comment-details clr">
+                    <header class="comment-meta">
+                        <cite class="fn"><?php comment_author_link(); ?></cite>
+                        <span class="comment-date">on <?php printf( '<time datetime="%1$s">%2$s</time>', get_comment_time('c'), get_comment_date()); ?> <?php comment_time(); ?></span><!-- .comment-date -->
+                        <span class="comment-link"><?php printf( '<a href="%1$s">#</a>', esc_url(get_comment_link($comment->comment_ID))); ?></span>
+                    </header><!-- .comment-meta -->
+                    <?php if ( '0' == $comment->comment_approved ) : ?><p class="comment-awaiting-moderation"><?php esc_html_e( 'Your comment is awaiting moderation.', 'twenties' ); ?></p><?php endif; ?>
+                    <div class="comment-content entry clr"><?php comment_text(); ?></div><!-- .comment-content -->
+                </div><!-- .comment-details -->
+            </article><!-- #comment-## -->
+            <?php
+            break;
+    endswitch; // End comment_type check.
+}
+
+// Add placeholder for Name and Email
+function modify_comment_form_fields($fields){
+    $fields['author'] = '<input id="author" placeholder="Your name" name="author" type="text" value="" required="required" aria-required="true" />';
+    $fields['email'] = '<input id="email" placeholder="Your email" name="email" type="email" value="" required="required" aria-required="true" />';
+    $fields['url'] = '<input id="url" name="url" placeholder="Website" type="url" value="" />';
+    return $fields;
+}
+add_filter('comment_form_default_fields','modify_comment_form_fields');
