@@ -19,6 +19,8 @@
 <link rel="stylesheet" href="/wp-content/themes/techblogger/assets/css/syntax.css">
 <link rel="stylesheet" href="/wp-content/themes/techblogger/assets/css/lanyon.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+<link rel="stylesheet" href="/wp-content/themes/techblogger/assets/css/prism.css">
+<script type="text/javascript" src="/wp-content/themes/techblogger/assets/js/prism.js"></script>
 <?php wp_footer(); ?>
 </body>
 </html>
