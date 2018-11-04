@@ -32,10 +32,6 @@
 <!-- /MENU -->
         </nav>
         <div class="sidebar-item">
-        <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Sidebar") ) : ?>
-        <?php endif;?>
-        </div>
-        <div class="sidebar-item">
             <p>&copy; <?php echo date("Y"); ?>. All rights reserved.</p>
         </div>
     </div>
