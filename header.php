@@ -5,6 +5,9 @@
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
     <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="/wp-content/themes/techblogger/assets/css/style.css">
+    <script async="async" type="text/javascript" src="/wp-content/themes/techblogger/assets/js/combined.min.js"></script>
     <?php wp_head(); ?>
 </head>
 <body class="theme-base-0d">
