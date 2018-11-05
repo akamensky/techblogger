@@ -205,11 +205,3 @@ function modify_comment_form_fields($fields){
     return $fields;
 }
 add_filter('comment_form_default_fields','modify_comment_form_fields');
-
-function remove_jquery_from_frontend( ){
-    wp_dequeue_script('jquery');
-    wp_deregister_script('jquery');
-    wp_dequeue_script('jquery-migrate');
-    wp_deregister_script('jquery-migrate');
-}
-add_filter('wp_enqueue_scripts', 'remove_jquery_from_frontend', PHP_INT_MAX);
