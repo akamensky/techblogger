@@ -33,3 +33,20 @@ form#commentform textarea,input {
 textarea#comment {
     height: 5rem;
 }
+
+.comment-author {
+    display: inline-block;
+    float: left;
+    margin-top: -5px;
+}
+
+.comment-author img {
+    width: 35px;
+    height: 35px;
+    margin: 0;
+    margin-right: 0.5rem;
+    padding: 1px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 0;
+}

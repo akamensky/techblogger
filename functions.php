@@ -184,6 +184,9 @@ function better_comments($comment, $args, $depth) {
             <article id="comment-<?php comment_ID(); ?>" <?php comment_class('clr'); ?>>
                 <div class="comment-details clr">
                     <header class="comment-meta">
+                        <div class="comment-author vcard">
+                            <?php echo get_avatar( $comment, 35 ); ?>
+                        </div>
                         <cite class="fn"><?php comment_author_link(); ?></cite>
                         <span class="comment-date">on <?php printf( '<time datetime="%1$s">%2$s</time>', get_comment_time('c'), get_comment_date()); ?> <?php comment_time(); ?></span><!-- .comment-date -->
                         <span class="comment-link"><?php printf( '<a href="%1$s">#</a>', esc_url(get_comment_link($comment->comment_ID))); ?></span>
